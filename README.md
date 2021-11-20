@@ -1,6 +1,6 @@
 # Star_Wars
-The app contains the following:
-- Web api service created by .NET and C# as a backend.
+it's an app contains the following:
+- Web api service created by .NET and C# as a backend "using MediatR pattern CQRS" excluded logging, performance filter check.
 - Angular 2+ as a frontend.
 
 Make sure about the following configuration.
