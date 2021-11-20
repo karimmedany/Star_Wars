@@ -1,0 +1,33 @@
+<div class="center">
+  <img src="../../../assets/img/1041px-Star_Wars_Logo.svg.png" width="500px" height="200px"/>
+</div>
+
+
+
+<div class="center">
+  <button class="center" style="width: 120px;" mat-button (click)="getAll();" color="primary" >Do</button>
+</div>
+
+<div class="center" *ngIf="IsResultAppear">
+
+  <h1 class="center">Which of all Star Wars movies has the longest opening crawl?</h1>
+  <p class="center">{{taskService.GetLongestOpeningCrawlQueryResponse.result}}</p>
+
+  <h1>What character appeared in most of the Star Wars films?</h1>
+  <p>{{taskService.GetMostPersonAppearQueryResponse.result}}</p>
+  
+
+
+<h1>What species appeared in the most number of Star Wars films?</h1>
+<div *ngFor="let msa of taskService.GetMostSpaciesAppearQueryResponse ">
+  <p>{{msa.result}} - {{msa.count}}</p>
+</div>
+
+  <h1>What planet in Star Wars universe provided largest number of vehicle pilots?</h1>
+    <div *ngFor="let ppswu of taskService.GetPlanetPilotStarWarsUniverseQueryResponse ">
+      <mat-card >
+      <mat-card-content>Planet: {{ppswu.planet}} - Pilots: ({{ppswu.count}}) -  {{ppswu.pilot}}</mat-card-content>
+      </mat-card>
+    </div>
+
+    </div>

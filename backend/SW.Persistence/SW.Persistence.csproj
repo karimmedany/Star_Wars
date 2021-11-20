@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configurations\BrandConfiguration.cs" />
+    <Compile Remove="Configurations\CaseClassificationConfiguration.cs" />
+    <Compile Remove="Configurations\CaseConfiguration.cs" />
+    <Compile Remove="Configurations\CityConfiguration.cs" />
+    <Compile Remove="Configurations\CommentConfiguration.cs" />
+    <Compile Remove="Configurations\CompanyConfiguration.cs" />
+    <Compile Remove="Configurations\CountryConfiguration.cs" />
+    <Compile Remove="Configurations\EstablishmentConfiguration.cs" />
+    <Compile Remove="Configurations\EstablishmentUserConfiguration.cs" />
+    <Compile Remove="Configurations\HeightUnitConfiguration.cs" />
+    <Compile Remove="Configurations\MissingPersonConfiguration.cs" />
+    <Compile Remove="Configurations\MissingPersonImageConfiguration.cs" />
+    <Compile Remove="Configurations\MissingPerson_CaseClassificationConfiguration.cs" />
+    <Compile Remove="Configurations\ProfileConfiguration.cs" />
+    <Compile Remove="Configurations\SubscribeRoleConfiguration.cs" />
+    <Compile Remove="Configurations\SubscriptionUserConfiguration1.cs" />
+    <Compile Remove="Configurations\UserConfiguration.cs" />
+    <Compile Remove="Configurations\UserdetailsConfiguration.cs" />
+    <Compile Remove="Configurations\UserDeviceConfiguration.cs" />
+    <Compile Remove="Configurations\UserLocationConfiguration.cs" />
+    <Compile Remove="Configurations\UserRefreshTokenConfiguration.cs" />
+    <Compile Remove="Configurations\WeightUnitConfiguration.cs" />
+    <Compile Remove="Context.cs" />
+    <Compile Remove="LogContext .cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SW.Application\SW.Application.csproj" />
+  </ItemGroup>
+
+</Project>

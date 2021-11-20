@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="App\AppAnimal\**" />
+    <Compile Remove="App\AppArea\**" />
+    <Compile Remove="App\AppCity\**" />
+    <Compile Remove="App\AppCountry\**" />
+    <Compile Remove="App\AppEstablishmentType\**" />
+    <Compile Remove="App\AppEstablishment\**" />
+    <Compile Remove="App\AppMissingPerson\**" />
+    <Compile Remove="App\AppUser\**" />
+    <Compile Remove="App\Brands\**" />
+    <Compile Remove="App\CarRent\**" />
+    <Compile Remove="App\CaseClassification\**" />
+    <Compile Remove="App\HeightUnit\**" />
+    <Compile Remove="App\Models\**" />
+    <Compile Remove="App\WeightUnit\**" />
+    <Compile Remove="Common\Handlers\**" />
+    <Compile Remove="Common\Images\**" />
+    <Compile Remove="Common\Logs\**" />
+    <EmbeddedResource Remove="App\AppAnimal\**" />
+    <EmbeddedResource Remove="App\AppArea\**" />
+    <EmbeddedResource Remove="App\AppCity\**" />
+    <EmbeddedResource Remove="App\AppCountry\**" />
+    <EmbeddedResource Remove="App\AppEstablishmentType\**" />
+    <EmbeddedResource Remove="App\AppEstablishment\**" />
+    <EmbeddedResource Remove="App\AppMissingPerson\**" />
+    <EmbeddedResource Remove="App\AppUser\**" />
+    <EmbeddedResource Remove="App\Brands\**" />
+    <EmbeddedResource Remove="App\CarRent\**" />
+    <EmbeddedResource Remove="App\CaseClassification\**" />
+    <EmbeddedResource Remove="App\HeightUnit\**" />
+    <EmbeddedResource Remove="App\Models\**" />
+    <EmbeddedResource Remove="App\WeightUnit\**" />
+    <EmbeddedResource Remove="Common\Handlers\**" />
+    <EmbeddedResource Remove="Common\Images\**" />
+    <EmbeddedResource Remove="Common\Logs\**" />
+    <None Remove="App\AppAnimal\**" />
+    <None Remove="App\AppArea\**" />
+    <None Remove="App\AppCity\**" />
+    <None Remove="App\AppCountry\**" />
+    <None Remove="App\AppEstablishmentType\**" />
+    <None Remove="App\AppEstablishment\**" />
+    <None Remove="App\AppMissingPerson\**" />
+    <None Remove="App\AppUser\**" />
+    <None Remove="App\Brands\**" />
+    <None Remove="App\CarRent\**" />
+    <None Remove="App\CaseClassification\**" />
+    <None Remove="App\HeightUnit\**" />
+    <None Remove="App\Models\**" />
+    <None Remove="App\WeightUnit\**" />
+    <None Remove="Common\Handlers\**" />
+    <None Remove="Common\Images\**" />
+    <None Remove="Common\Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\Interfaces\IImageManager.cs" />
+    <Compile Remove="Common\Interfaces\ILogContext.cs" />
+    <Compile Remove="Common\Interfaces\ILogRepository.cs" />
+    <Compile Remove="Common\Interfaces\INotificationService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.12.2" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
+    <PackageReference Include="System.Security.Claims" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App\AppTask\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SW.Domain\SW.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

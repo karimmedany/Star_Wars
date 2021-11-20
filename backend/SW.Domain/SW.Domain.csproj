@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\CaseClassification.cs" />
+    <Compile Remove="Entities\City.cs" />
+    <Compile Remove="Entities\Country.cs" />
+    <Compile Remove="Entities\Establishment.cs" />
+    <Compile Remove="Entities\EstablishmentUser.cs" />
+    <Compile Remove="Entities\HeightUnit.cs" />
+    <Compile Remove="Entities\MissingPerson.cs" />
+    <Compile Remove="Entities\MissingPersonImage.cs" />
+    <Compile Remove="Entities\MissingPerson_CaseClassification.cs" />
+    <Compile Remove="Entities\Role.cs" />
+    <Compile Remove="Entities\SubscribeUser.cs" />
+    <Compile Remove="Entities\Sub_Role.cs" />
+    <Compile Remove="Entities\User.cs" />
+    <Compile Remove="Entities\UserDetails.cs" />
+    <Compile Remove="Entities\UserDevice.cs" />
+    <Compile Remove="Entities\UserLocation.cs" />
+    <Compile Remove="Entities\UserProfile.cs" />
+    <Compile Remove="Entities\UserRefreshToken.cs" />
+    <Compile Remove="Entities\WeightUnit.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

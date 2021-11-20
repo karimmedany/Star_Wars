@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstracts\IAppSettingConfiguration.cs" />
+    <Compile Remove="Abstracts\ICustomAPIClient.cs" />
+    <Compile Remove="Abstracts\ICustomAppSetting.cs" />
+    <Compile Remove="Abstracts\IDateTime.cs" />
+    <Compile Remove="Abstracts\IEncryptedDecryptedValue.cs" />
+    <Compile Remove="CustomAddConfigureServices.cs" />
+    <Compile Remove="IAppSettingConfiguration.cs" />
+    <Compile Remove="Implementations\CustomAPIClient.cs" />
+    <Compile Remove="Implementations\CustomAppSetting.cs" />
+    <Compile Remove="Implementations\CustomHelloFriendAppSetting.cs" />
+    <Compile Remove="INeroutecInitilizer.cs" />
+    <Compile Remove="Statics\KeyGenerator.cs" />
+    <Compile Remove="Statics\ManageConfiguration.cs" />
+    <Compile Remove="Statics\NeroutecInitilizer.cs" />
+    <Compile Remove="Statics\OrderQuery.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstracts\" />
+    <Folder Include="Statics\" />
+  </ItemGroup>
+
+</Project>
