@@ -29,16 +29,23 @@ namespace SW.Application.App.AppTask.Queries
 
 
                 var selectedSpecies = await (from planet in _context.Planets
+
                                              join fp in _context.FilmsPlanets
                                              on planet.id equals fp.planet_id
+
                                              join fs in _context.FilmsStarships
                                              on fp.film_id equals fs.film_id
 
                                              join sp in _context.StarshipsPilots
-                               on fs.starship_id equals sp.starship_id
+                                             on fs.starship_id equals sp.starship_id
+
                                              group fs by fs.starship_id into cp
                                              orderby cp.Count() descending
-                                             select new { starshipId = cp.Key, count = cp.Count() }).Take(4).ToListAsync();
+                                             select new
+                                             {
+                                                 starshipId = cp.Key,
+                                                 count = cp.Count()
+                                             }).Take(4).ToListAsync();
 
 
 
