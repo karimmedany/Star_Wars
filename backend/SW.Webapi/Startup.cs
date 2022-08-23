@@ -1,6 +1,6 @@
 ﻿using SW.Application.Common.Interfaces;
 using SW.Persistence;
-using SW.Webapi.Filters;
+
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Newtonsoft.Json.Converters;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace SW.Webapi
 {
@@ -76,14 +77,27 @@ namespace SW.Webapi
 
             string connectionString = Configuration.GetConnectionString("DBConnection");
 
-            // Add DbContext using SQL Server Provider
+            //Add DbContext using SQL Server Provider
             services.AddDbContext<IDBContext, DBContext>(options =>
 
-                    options.UseSqlServer(
-                        connectionString)
+                    options.UseMySql(
+                        connectionString,
+                        new MySqlServerVersion(new Version(8, 0, 11)),
 
-                ) ;
-         
+            mySqlOptions =>
+            {
+                mySqlOptions.EnableRetryOnFailure(maxRetryCount: 3,
+                                                   maxRetryDelay: TimeSpan.FromSeconds(10),
+                                                   errorNumbersToAdd: null);
+                mySqlOptions.DefaultDataTypeMappings(
+                    mappings => mappings.WithClrDateTime(MySqlDateTimeType.DateTime6)); // <--- added this
+
+            })
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors()
+
+                );
+
 
 
 

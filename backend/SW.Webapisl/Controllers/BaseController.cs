@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace SW.Webapi.Controllers
+namespace SW.Webapisl.Controllers
 {
     //[Authorize]
     [Route("api/[controller]")]

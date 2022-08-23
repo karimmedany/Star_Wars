@@ -6,7 +6,7 @@ using SW.Application.App.AppTask.Queries;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SW.Webapi.Controllers
+namespace SW.Webapisl.Controllers
 {
     public class TaskController : BaseController
     {

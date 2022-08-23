@@ -26,7 +26,7 @@ namespace SW.Application.App.AppTask.Queries
             {
                 GetMostPersonAppearQueryResponse response = new GetMostPersonAppearQueryResponse();
 
-
+                var sss = _context.Films.ToList();
                 var selectedCharacter = await (from film in _context.Films
                                     join character in _context.FilmsCharacters
                                     on film.id equals character.film_id 

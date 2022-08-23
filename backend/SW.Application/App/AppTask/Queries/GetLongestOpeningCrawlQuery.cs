@@ -25,8 +25,7 @@ namespace SW.Application.App.AppTask.Queries
             public async Task<GetLongestOpeningCrawlQueryResponse> Handle(GetLongestOpeningCrawlQuery request, CancellationToken cancellationToken)
             {
                 GetLongestOpeningCrawlQueryResponse response = new GetLongestOpeningCrawlQueryResponse();
-
-
+     
                 var selectedfilm = await _context.Films.OrderBy(i => i.opening_crawl.Length).FirstOrDefaultAsync();
                 if (selectedfilm != null)
                 {
