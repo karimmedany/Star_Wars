@@ -1,6 +1,7 @@
 # Star_Wars
 it's an app contains the following:
 - Web api service created by .NET and C# as a backend "using MediatR pattern CQRS" excluded logging, performance filter check.
+- Multitier architecture with decoupling
 - Added solution WS.Webapisl ==> serverless create docker container and attach it to lambda function "AWS". (microservices)
 - Angular 2+ as a frontend.
 
