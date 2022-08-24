@@ -11,5 +11,7 @@ Make sure about the following configuration.
 - Make sure to update the packages using command npm install -g npm@latest.
 - ng serve for the root of the angular after running the webapi.
 
-NOTE: database (mysql) Dump20220822 if you want to use it locally.
 Out of scope: JwtBearer implementation (secure the service).
+
+NOTE: database (mysql) Dump20220822 if you want to use it locally.
+
