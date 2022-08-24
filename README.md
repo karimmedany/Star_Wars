@@ -2,6 +2,9 @@
 it's an app contains the following:
 - Web api service created by .NET and C# as a backend "using MediatR pattern CQRS" excluded logging, performance filter check.
 - Multitier architecture with decoupling.
+    - Perestentaion ==> normal webapi hosting SW.Webapi and serverless hosting SW.Webapisl
+    - Infrastructure ==> entities configurations SW.Persistence
+    - Core ==> entity framework code frist SW.Domain and logic of CQRS request handlers SW.Application
 - Added solution WS.Webapisl ==> serverless create docker container and attach it to lambda function "AWS". (microservices)
 - Angular 2+ as a frontend.
 

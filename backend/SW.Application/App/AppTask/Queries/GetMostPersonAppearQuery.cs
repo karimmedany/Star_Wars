@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation.Results;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using SW.Application.Common.Interfaces;
 using System.Linq;
@@ -30,9 +31,11 @@ namespace SW.Application.App.AppTask.Queries
                 var selectedCharacter = await (from film in _context.Films
                                     join character in _context.FilmsCharacters
                                     on film.id equals character.film_id 
-                                               group character by character.people_id into cp
+
+                                    group character by character.people_id into cp
                                     orderby cp.Count()  descending
                                     select cp.Key).FirstOrDefaultAsync();
+
 
               var selectedPerson = await  _context.People.FirstOrDefaultAsync(i => i.id == selectedCharacter);
                 if(selectedPerson!=null)
