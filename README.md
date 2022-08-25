@@ -1,6 +1,6 @@
 # Star_Wars
 it's an app contains the following:
-- Web api service created by .NET and C# as a backend "using MediatR pattern CQRS" excluded logging, performance filter check.
+- Web api service created by .NET and C# as a backend "using MediatR pattern CQRS".
 - Multitier architecture with decoupling.
     - Perestentaion ==> normal webapi hosting SW.Webapi and serverless hosting SW.Webapisl
     - Infrastructure ==> entities configurations SW.Persistence
@@ -14,7 +14,7 @@ Make sure about the following configuration.
 - Make sure to update the packages using command npm install -g npm@latest.
 - ng serve for the root of the angular after running the webapi.
 
-Out of scope: JwtBearer implementation (secure the service).
+Out of scope: JwtBearer implementation (secure the service),logging, performance filter check. 
 
 NOTE: database (mysql) Dump20220822 if you want to use it locally.
 
